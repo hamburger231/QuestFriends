@@ -13,7 +13,7 @@ export default function Component() {
     
 const router = useRouter()
 const back = () => {
-    router.push('/strona-glowna')
+    router.push('/main-page')
 }
 const questInfo = () => {
     router.push('/leaderboard')

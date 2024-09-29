@@ -3,17 +3,19 @@
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import React from 'react'
+import Link from 'next/link'
 
 export default function LoginPage() {
   const router = useRouter()
 
   const skipToMain = () => {
-    router.push('/strona-glowna')
+    console.log('skip to main')
+    router.push('/main-page')
   }
 
   return (
     <>
-    <div onClick={skipToMain} className='fixed w-full h-full top-0 bg-opacity-100 bg-black z-50'>
+    <Link href="/main-page" className='fixed w-full h-full top-0 bg-opacity-100 bg-black z-50'>
         <div className="flex flex-col items-center justify-center min-h-screen bg-white p-4">
           <div className="w-full max-w-md space-y-8">
             <div className="text-center">
@@ -51,8 +53,8 @@ export default function LoginPage() {
             </div>
           </div>
         </div>
-    </div>
-    <h1  onClick={skipToMain} style={{textAlign:"center",color:"white",height:"100%", width: "100%",top:"50%" ,padding:"25%", backgroundColor: "rgba(0,0,0,0.9)",position: 'fixed', left: '50%', zIndex: '1000', transform:"translate(-50%, -50%)", fontWeight:"700", fontSize: "30px"}}>loggin is skiped this due to beeing POC<br/><br/>Press to Continue</h1>
+        <h1 style={{textAlign:"center",color:"white",height:"100%", width: "100%",top:"50%" ,padding:"25%", backgroundColor: "rgba(0,0,0,0.9)",position: 'fixed', left: '50%', zIndex: '1000', transform:"translate(-50%, -50%)", fontWeight:"700", fontSize: "30px"}}>loggin is skiped this due to beeing POC<br/><br/>Press to Continue</h1>
+    </Link>
     </>
     
   )

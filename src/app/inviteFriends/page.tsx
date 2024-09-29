@@ -28,7 +28,7 @@ export default function InvitePage() {
       <Link href='main-page' className="text-2xl mb-8">
         <ArrowLeft  className='w-8 h-8' />
       </Link>
-      <h1 className="text-4xl font-bold mb-8">7 szklanek wody dziennie</h1>
+      <h1 className="text-4xl font-bold mb-8">7 glasses of water a day</h1>
       <div className="flex mb-8">
         <Input 
           value={inviteLink} 

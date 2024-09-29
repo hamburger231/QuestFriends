@@ -23,7 +23,7 @@ export default function ChallengePage() {
       <Link href="/challange" className="text-2xl mb-8">
         <ArrowLeft className='h-8 w-8' />
       </Link>
-      <h1 className="text-4xl font-bold mb-4">7 szklanek wody dziennie</h1>
+      <h1 className="text-4xl font-bold mb-4">7 glasses of water a day</h1>
       <p className="text-lg mb-8">
         start ({startDate.toLocaleDateString()}) - 
         koniec ({endDate.toLocaleDateString()})

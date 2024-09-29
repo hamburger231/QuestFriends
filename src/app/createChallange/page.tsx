@@ -40,14 +40,14 @@ export default function CreateQuestPage() {
               <SelectValue placeholder="Select frequency" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="day">dzień</SelectItem>
-              <SelectItem value="week">tydzień</SelectItem>
-              <SelectItem value="month">miesiąc</SelectItem>
+              <SelectItem value="day">day</SelectItem>
+              <SelectItem value="week">week</SelectItem>
+              <SelectItem value="month">month</SelectItem>
             </SelectContent>
           </Select>
         </div>
         <Link href="/main-page">
-            <Button variant="outline" className="w-full">Anuluj</Button>
+            <Button variant="outline" className="w-full">Cancel</Button>
         </Link>
       </form>
     </div>

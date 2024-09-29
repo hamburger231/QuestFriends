@@ -97,9 +97,9 @@ function ChallengeCard({ icon, title, duration, backgroundImage, onTakeUp }: Cha
 
 export default function MainPage() {
   const [quests, setQuests] = useState([
-    { title: "30 days without drinking", duration: "Dzisiaj 0/1", progress: 0, total: 1, backgroundImage: "/placeholder.svg?height=192&width=168", isFinished: false },
-    { title: "10 glasses of water daily", duration: "Dzisiaj 3/10", progress: 3, total: 10, backgroundImage: "/placeholder.svg?height=192&width=168", isFinished: false },
-    { title: "30 days without alcohol", duration: "Dzisiaj 1/1", progress: 1, total: 1, backgroundImage: "/placeholder.svg?height=192&width=168", isFinished: true }
+    { title: "30 days without drinking", duration: "Today 0/1", progress: 0, total: 1, backgroundImage: "/placeholder.svg?height=192&width=168", isFinished: false },
+    { title: "10 glasses of water daily", duration: "Today 3/10", progress: 3, total: 10, backgroundImage: "/placeholder.svg?height=192&width=168", isFinished: false },
+    { title: "30 days without alcohol", duration: "Today 1/1", progress: 1, total: 1, backgroundImage: "/placeholder.svg?height=192&width=168", isFinished: true }
   ]);
 
   const [challenges, setChallenges] = useState([
@@ -113,7 +113,7 @@ export default function MainPage() {
     setQuests(prevQuests => {
       const newQuests = [...prevQuests];
       newQuests[index].progress += 0.5;
-      newQuests[index].duration = `Dzisiaj ${newQuests[index].progress}/${newQuests[index].total}`;
+      newQuests[index].duration = `Today ${newQuests[index].progress}/${newQuests[index].total}`;
       return newQuests;
     });
   };
@@ -123,7 +123,7 @@ export default function MainPage() {
       const newQuests = [...prevQuests];
       newQuests[index].isFinished = true;
       newQuests[index].progress = newQuests[index].total;
-      newQuests[index].duration = `Dzisiaj ${newQuests[index].total}/${newQuests[index].total}`;
+      newQuests[index].duration = `Today ${newQuests[index].total}/${newQuests[index].total}`;
       return newQuests;
     });
   };
@@ -134,7 +134,7 @@ export default function MainPage() {
       const takenUpChallenge = newChallenges.splice(index, 1)[0];
       setQuests(prevQuests => [
         ...prevQuests,
-        { ...takenUpChallenge, progress: 0, total: 7, isFinished: false, duration: `Dzisiaj 0/7` }
+        { ...takenUpChallenge, progress: 0, total: 7, isFinished: false, duration: `Today 0/7` }
       ]);
       return newChallenges;
     });
@@ -176,7 +176,7 @@ export default function MainPage() {
         ))}
       </div>
 
-      <h2 className="text-xl font-bold mb-4">Zobacz chelenge stworzone przez nas</h2>
+      <h2 className="text-xl font-bold mb-4">See challanges done by us</h2>
       <div className="grid grid-cols-2 gap-4 mb-6">
         {challenges.map((challenge, index) => (
           <ChallengeCard 
