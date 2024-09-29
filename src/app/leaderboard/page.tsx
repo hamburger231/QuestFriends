@@ -51,12 +51,12 @@ export default function StepChallengePage() {
   }
 
   const leaderboardData = [
-    { name: "Jan Pawel I", score: 8, total: 10, rank: 1, avatarSrc: "/avatar1.png" },
-    { name: "Jan Pawel II", score: 7, total: 10, rank: 2, avatarSrc: "/avatar2.png" },
-    { name: "Jan Pawel III", score: 6, total: 10, rank: 3, avatarSrc: "/avatar3.png" },
+    { name: "Jan Cebula", score: 8, total: 10, rank: 1, avatarSrc: "/avatar1.png" },
+    { name: "Andrzej Cieśla", score: 7, total: 10, rank: 2, avatarSrc: "/avatar2.png" },
+    { name: "Józef Wróbel", score: 6, total: 10, rank: 3, avatarSrc: "/avatar3.png" },
     currentUser,
-    { name: "Jan Pawel V", score: 4, total: 10, rank: 5, avatarSrc: "/avatar5.png" },
-    { name: "Jan Pawel VI", score: 3, total: 10, rank: 6, avatarSrc: "/avatar6.png" },
+    { name: "Olek Rubel", score: 4, total: 10, rank: 5, avatarSrc: "/avatar5.png" },
+    { name: "Maja Kwiatkowska", score: 3, total: 10, rank: 6, avatarSrc: "/avatar6.png" },
   ]
 
   return (
